@@ -811,4 +811,14 @@ footer span a:hover {
         font-size: 23px;
         line-height: 38px;
     }
+    
+}
+.lio{
+    color: red;
+}
+
+.img-brand{
+ height: 3%;
+ width: 3%;
+ border-radius: 100%;
 }
