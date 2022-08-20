@@ -815,10 +815,15 @@ footer span a:hover {
 }
 .lio{
     color: red;
+    font-weight: bold;
 }
 
 .img-brand{
- height: 3%;
- width: 3%;
+ height: 4%;
+ width: 4%;
  border-radius: 100%;
+}
+
+.navbar-brand{
+    font-weight: bolder;
 }
