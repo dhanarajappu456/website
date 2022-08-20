@@ -819,11 +819,12 @@ footer span a:hover {
 }
 
 .img-brand{
- height: 4%;
- width: 4%;
+ height: 40px;
+ width: 40px;
  border-radius: 100%;
 }
 
-.navbar-brand{
+.navbar .navbar-brand{
     font-weight: bolder;
+    font-size: 30px;
 }
