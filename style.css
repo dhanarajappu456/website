@@ -851,3 +851,6 @@ footer span a:hover {
     font-weight: bolder;
     font-size: 30px;
 }
+.navbar .menu li a{
+    text-decoration: none;
+}
