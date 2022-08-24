@@ -49,5 +49,10 @@ $(document).ready(function() {
         backSpeed: 60,
         loop: true
     });
+    
 
 });
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
