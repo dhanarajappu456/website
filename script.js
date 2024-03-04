@@ -36,9 +36,8 @@ $(document).ready(function () {
   // typing text animation script
   var typed = new Typed(".typing", {
     strings: [
+      "Software Developer",
       "Cybersecurity enthusiast",
-      "Developer",
-      "BioInformatics enthusiast",
       "Coder",
       "Problem solver",
     ],
@@ -76,7 +75,7 @@ for (let i = 0; i < 3; i++) {
   let progressStartValue = 0;
   let progressEndValue = fractionProb[i];
   console.log(progressEndValue);
-  speed = 100;
+  speed = 190;
 
   let progress = setInterval(() => {
     progressStartValue++;
