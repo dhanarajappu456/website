@@ -437,35 +437,44 @@ section .title::after {
 }
 
 .skills-content .right .html::before {
-    width: 90%;
+    width: 100%;
 }
 
 .skills-content .right .css::before {
-    width: 80%;
+    width: 100%;
 }
 
 .skills-content .right .js::before {
-    width: 70%;
+    width: 100%;
 }
 
 .skills-content .right .python::before {
-    width: 90%;
+    width: 100%;
 }
 
 .skills-content .right .mysql::before {
-    width: 85%;
+    width: 100%;
 }
 
 .skills-content .right .Problem::before {
-    width: 75%;
+    width: 100%;
 }
 
 .skills-content .right .Ethical::before {
-    width: 70%;
+    width: 100%;
 }
 
 .skills-content .right .Bio::before {
-    width: 60%;
+    width: 100%;
+}
+
+.skills-content .right .Moband::before {
+    width: 100%;
+}
+
+
+.skills-content .right .RN::before {
+    width: 100%;
 }
 
 
