@@ -60,6 +60,9 @@ $(document).ready(function () {
   });
 });
 
+const d = new Date();
+const year = d.getFullYear();
+document.querySelector(".year").textContent = year;
 const f = async () => {
   try {
     const resp = await fetch(
