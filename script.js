@@ -48,9 +48,8 @@ $(document).ready(function () {
 
   var typed = new Typed(".typing-2", {
     strings: [
+        "Software Developer",
       "Cybersecurity enthusiast",
-      "Developer",
-      "BioInformatics enthusiast",
       "Coder",
       "Problem solver",
     ],
