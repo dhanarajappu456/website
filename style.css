@@ -984,3 +984,9 @@ footer span a:hover {
     font-weight: 500;
     color: #606060;
 }
+
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
