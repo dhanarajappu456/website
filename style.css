@@ -1012,6 +1012,10 @@ article .line{
 	border-radius: 5px;
 }
 
+.article .circle{
+    background-color: #bbb;
+}
+
 article .shimmer{
 	position: absolute;
 	top: 0;
@@ -1034,4 +1038,20 @@ article .shimmer{
 	to{
 		transform: translateX(90%);
 	}
+}
+
+.line_leet {
+
+    display:inline-block ;
+    color: #bbb;
+     background-color: #bbb;
+     border-radius: 4px;
+}
+
+.circle_leet{
+    background-color: #bbb;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+
 }
