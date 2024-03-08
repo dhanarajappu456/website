@@ -68,14 +68,28 @@ document.querySelector(".year").textContent = year;
 const f = async () => {
   try {
     const resp = await fetch(
-      "https://leetcode-api-faisalshohag.vercel.app/dan_stark123"
+      "https://leet-code-api-opal.vercel.app/userInfo/dan_stark123"
     );
-    const d = await resp.json();
-    const probsSolved = [d["easySolved"], d["mediumSolved"], d["hardSolved"]];
-    const total = [d["totalEasy"], d["totalMedium"], d["totalHard"]];
-    const totalSolved = d["totalSolved"];
 
-    console.log;
+    let data = await resp.json();
+    data = data.data;
+    console.log(JSON.stringify(data), "probs");
+    const solvedArray = data.matchedUser.submitStatsGlobal.acSubmissionNum;
+    const probsSolved = [
+      solvedArray[1].count,
+      solvedArray[2].count,
+      solvedArray[3].count,
+    ];
+    const totalArray = data.allQuestionsCount;
+    // const probsSolved = [d["easySolved"], d["mediumSolved"], d["hardSolved"]];
+    const total = [
+      totalArray[1].count,
+      totalArray[2].count,
+      totalArray[3].count,
+    ];
+    const totalSolved = solvedArray[0].count;
+
+    console.log(probsSolved, totalSolved);
     return [probsSolved, total, totalSolved];
   } catch (err) {
     console.log("error");
@@ -90,7 +104,7 @@ function myFunction() {
 }
 const problemFunction = async () => {
   const problemInfo = await f();
-  const element = ` <div  class='cont-leet' onMouseOver="this.style.backgroundColor='rgb(219, 25, 25)'" onMouseOut="this.style.backgroundColor='#211f1f'" class="card" class="max-width" style="background-color: #211f1f ;border-radius: 5px; padding: 30px;">
+  const element = `<div  class='cont-leet' onMouseOver="this.style.backgroundColor='rgb(219, 25, 25)'" onMouseOut="this.style.backgroundColor='#211f1f'" class="card" class="max-width" style="background-color: #211f1f ;border-radius: 5px; padding: 30px;">
               
   <div style="background-color: white; width: 60px; height: 60px; border-radius: 80%; display: flex; justify-content: center; align-items: center;">
       <img style="width: 50px; height: 50px;" src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" class="card-img-top" alt="...">
@@ -138,6 +152,7 @@ const problemFunction = async () => {
 `;
   document.getElementsByClassName("cont-leet")[0].innerHTML = element;
   const totalSolved = problemInfo[2];
+  console.log(problemInfo);
   document.querySelector(".prob-count").textContent = totalSolved;
   document.querySelector(".easy").textContent = problemInfo[0][0];
   document.querySelector(".medium").textContent = problemInfo[0][1];
