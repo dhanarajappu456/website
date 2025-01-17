@@ -72,24 +72,23 @@ const f = async () => {
     );
 
     let data = await resp.json();
-    data = data.data;
     console.log(JSON.stringify(data), "probs");
-    const solvedArray = data.matchedUser.submitStatsGlobal.acSubmissionNum;
-    const probsSolved = [
-      solvedArray[1].count,
-      solvedArray[2].count,
-      solvedArray[3].count,
-    ];
+    const probsSolved = data.totalSubmissions.map(entry => entry.count);
+    // const probsSolved = [
+    //   solvedArray[1].count,
+    //   solvedArray[2].count,
+    //   solvedArray[3].count,
+    // ];
     const totalArray = data.allQuestionsCount;
     // const probsSolved = [d["easySolved"], d["mediumSolved"], d["hardSolved"]];
     const total = [
-      totalArray[1].count,
-      totalArray[2].count,
-      totalArray[3].count,
+       data.totalEasy,
+      data.totalMedium,
+      data.totalHard
     ];
-    const totalSolved = solvedArray[0].count;
+    const totalSolved = probsSolved[0];
 
-    console.log(probsSolved, totalSolved);
+    console.log("prob" ,probsSolved, totalSolved);
     return [probsSolved, total, totalSolved];
   } catch (err) {
     console.log("error");
